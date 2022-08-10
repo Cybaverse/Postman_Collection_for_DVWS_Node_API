@@ -1,0 +1,1907 @@
+{
+	"info": {
+		"_postman_id": "26af2132-54b7-4e40-af7b-ae709a7de9f1",
+		"name": "DVWS API",
+		"description": "API Used for DVWS Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14115725"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "notes",
+							"item": [
+								{
+									"name": "{ID}",
+									"item": [
+										{
+											"name": "/api/v2/notes/:ID",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{jwt_token}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json; charset=utf-8"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "name",
+															"value": "test",
+															"type": "text"
+														},
+														{
+															"key": "body",
+															"value": "testing 12345",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/v2/notes/:ID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"notes",
+														":ID"
+													],
+													"variable": [
+														{
+															"key": "ID",
+															"value": "test",
+															"description": "Name of note"
+														}
+													]
+												},
+												"description": "Auto generated using Swagger Inspector"
+											},
+											"response": [
+												{
+													"name": "Auto generated using Swagger Inspector",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "\"{\\\"name\\\":\\\"test\\\",\\\"body\\\":\\\"xxfoobarx\\\",\\\"type\\\":\\\"note\\\"}\"",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "http://dvws.local/api/v2/notes/:ID",
+															"protocol": "http",
+															"host": [
+																"dvws",
+																"local"
+															],
+															"path": [
+																"api",
+																"v2",
+																"notes",
+																":ID"
+															],
+															"variable": [
+																{
+																	"key": "ID"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														}
+													],
+													"cookie": [],
+													"body": "\"ea magna velit et Lorem\""
+												}
+											]
+										},
+										{
+											"name": "/api/v2/notes/:ID",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{jwt_token}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json; charset=utf-8"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/v2/notes/:ID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"v2",
+														"notes",
+														":ID"
+													],
+													"variable": [
+														{
+															"key": "ID",
+															"value": "testing",
+															"description": "Note name"
+														}
+													]
+												},
+												"description": "Auto generated using Swagger Inspector"
+											},
+											"response": [
+												{
+													"name": "Auto generated using Swagger Inspector",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "http://dvws.local/api/v2/notes/:ID",
+															"protocol": "http",
+															"host": [
+																"dvws",
+																"local"
+															],
+															"path": [
+																"api",
+																"v2",
+																"notes",
+																":ID"
+															],
+															"variable": [
+																{
+																	"key": "ID"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json; charset=utf-8"
+														}
+													],
+													"cookie": [],
+													"body": "\"ea magna velit et Lorem\""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/api/v2/notes",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwt_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json;charset=utf-8"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json; charset=utf-8"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "body",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "type",
+													"value": "public",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v2/notes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"notes"
+											]
+										},
+										"description": "Auto generated using Swagger Inspector"
+									},
+									"response": [
+										{
+											"name": "Auto generated using Swagger Inspector",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\"name\":\"test\",\"body\":\"xxx\",\"type\":\"note\"}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://dvws.local/api/v2/notes",
+													"protocol": "http",
+													"host": [
+														"dvws",
+														"local"
+													],
+													"path": [
+														"api",
+														"v2",
+														"notes"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												}
+											],
+											"cookie": [],
+											"body": "\"ea magna velit et Lorem\""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "users",
+							"item": [
+								{
+									"name": "/api/v2/users - Create New User",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json; charset=utf-8"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "username",
+													"value": "tester",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "tester",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v2/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"users"
+											]
+										},
+										"description": "Auto generated using Swagger Inspector"
+									},
+									"response": [
+										{
+											"name": "Auto generated using Swagger Inspector",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "0",
+															"value": "u"
+														},
+														{
+															"key": "1",
+															"value": "s"
+														},
+														{
+															"key": "2",
+															"value": "e"
+														},
+														{
+															"key": "3",
+															"value": "r"
+														},
+														{
+															"key": "4",
+															"value": "n"
+														},
+														{
+															"key": "5",
+															"value": "a"
+														},
+														{
+															"key": "6",
+															"value": "m"
+														},
+														{
+															"key": "7",
+															"value": "e"
+														},
+														{
+															"key": "8",
+															"value": "="
+														},
+														{
+															"key": "9",
+															"value": "x"
+														},
+														{
+															"key": "10",
+															"value": "x"
+														},
+														{
+															"key": "11",
+															"value": "x"
+														},
+														{
+															"key": "12",
+															"value": "&"
+														},
+														{
+															"key": "13",
+															"value": "p"
+														},
+														{
+															"key": "14",
+															"value": "a"
+														},
+														{
+															"key": "15",
+															"value": "s"
+														},
+														{
+															"key": "16",
+															"value": "s"
+														},
+														{
+															"key": "17",
+															"value": "w"
+														},
+														{
+															"key": "18",
+															"value": "o"
+														},
+														{
+															"key": "19",
+															"value": "r"
+														},
+														{
+															"key": "20",
+															"value": "d"
+														},
+														{
+															"key": "21",
+															"value": "="
+														},
+														{
+															"key": "22",
+															"value": "x"
+														},
+														{
+															"key": "23",
+															"value": "x"
+														},
+														{
+															"key": "24",
+															"value": "x"
+														}
+													]
+												},
+												"url": {
+													"raw": "http://dvws.local/api/v2/users",
+													"protocol": "http",
+													"host": [
+														"dvws",
+														"local"
+													],
+													"path": [
+														"api",
+														"v2",
+														"users"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												}
+											],
+											"cookie": [],
+											"body": "\"ea magna velit et Lorem\""
+										}
+									]
+								},
+								{
+									"name": "/api/v2/users",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwt_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json; charset=utf-8"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"users"
+											]
+										},
+										"description": "Auto generated using Swagger Inspector"
+									},
+									"response": [
+										{
+											"name": "Auto generated using Swagger Inspector",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://dvws.local/api/v2/users",
+													"protocol": "http",
+													"host": [
+														"dvws",
+														"local"
+													],
+													"path": [
+														"api",
+														"v2",
+														"users"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												}
+											],
+											"cookie": [],
+											"body": "\"ea magna velit et Lorem\""
+										}
+									]
+								},
+								{
+									"name": "/api/v2/users/checkadmin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwt_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json; charset=utf-8"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/users/checkadmin",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"users",
+												"checkadmin"
+											]
+										},
+										"description": "Auto generated using Swagger Inspector"
+									},
+									"response": [
+										{
+											"name": "Auto generated using Swagger Inspector",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://dvws.local/api/v2/users/checkadmin",
+													"protocol": "http",
+													"host": [
+														"dvws",
+														"local"
+													],
+													"path": [
+														"api",
+														"v2",
+														"users",
+														"checkadmin"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												}
+											],
+											"cookie": [],
+											"body": "\"ea magna velit et Lorem\""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "passphrase",
+							"item": [
+								{
+									"name": "/api/v2/passphrase",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwt_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json; charset=utf-8"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "passphrase",
+													"value": "3971576a744c82824b55347d3a606e6d",
+													"type": "text"
+												},
+												{
+													"key": "reminder",
+													"value": "Pass",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/v2/passphrase",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"passphrase"
+											]
+										},
+										"description": "Auto generated using Swagger Inspector"
+									},
+									"response": [
+										{
+											"name": "Passphrase Saved Successfully",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "\"{\\\"passphrase\\\":\\\"7d737d815e4c79825d6e604a6c5d726e\\\",\\\"reminder\\\":\\\"twerewr\\\"}\"",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://dvws.local/api/v2/passphrase",
+													"protocol": "http",
+													"host": [
+														"dvws",
+														"local"
+													],
+													"path": [
+														"api",
+														"v2",
+														"passphrase"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												}
+											],
+											"cookie": [],
+											"body": "\"ea magna velit et Lorem\""
+										}
+									]
+								},
+								{
+									"name": "/api/v2/passphrase/:username",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json; charset=utf-8"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/v2/passphrase/:username",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"v2",
+												"passphrase",
+												":username"
+											],
+											"variable": [
+												{
+													"key": "username",
+													"value": "test"
+												}
+											]
+										},
+										"description": "Auto generated using Swagger Inspector"
+									},
+									"response": [
+										{
+											"name": "Auto generated using Swagger Inspector",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://dvws.local/api/v2/passphrase/:username",
+													"protocol": "http",
+													"host": [
+														"dvws",
+														"local"
+													],
+													"path": [
+														"api",
+														"v2",
+														"passphrase",
+														":username"
+													],
+													"variable": [
+														{
+															"key": "username"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												}
+											],
+											"cookie": [],
+											"body": "\"ea magna velit et Lorem\""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Upload",
+							"item": [
+								{
+									"name": "upload",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwt_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json; charset=utf-8"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/upload",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"upload"
+											]
+										},
+										"description": "Auto generated using Swagger Inspector"
+									},
+									"response": [
+										{
+											"name": "Auto generated using Swagger Inspector",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "\"{\\\"search\\\":\\\"search\\\"}\"",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://dvws.local/api/v2/notesearch",
+													"protocol": "http",
+													"host": [
+														"dvws",
+														"local"
+													],
+													"path": [
+														"api",
+														"v2",
+														"notesearch"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												}
+											],
+											"cookie": [],
+											"body": "\"ea magna velit et Lorem\""
+										}
+									]
+								},
+								{
+									"name": "download",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{jwt_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"disabled": true
+											},
+											{
+												"key": "Accept",
+												"value": "application/json; charset=utf-8"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "filename",
+													"value": "test.xml",
+													"description": "File name",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/download",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"download"
+											]
+										},
+										"description": "Auto generated using Swagger Inspector"
+									},
+									"response": [
+										{
+											"name": "Auto generated using Swagger Inspector",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "\"{\\\"search\\\":\\\"search\\\"}\"",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "http://dvws.local/api/v2/notesearch",
+													"protocol": "http",
+													"host": [
+														"dvws",
+														"local"
+													],
+													"path": [
+														"api",
+														"v2",
+														"notesearch"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												}
+											],
+											"cookie": [],
+											"body": "\"ea magna velit et Lorem\""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/v2/info",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v2/info/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v2",
+										"info",
+										""
+									]
+								},
+								"description": "Auto generated using Swagger Inspector"
+							},
+							"response": [
+								{
+									"name": "Auto generated using Swagger Inspector",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://dvws.local/api/v2/info",
+											"protocol": "http",
+											"host": [
+												"dvws",
+												"local"
+											],
+											"path": [
+												"api",
+												"v2",
+												"info"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "\"ea magna velit et Lorem\""
+								}
+							]
+						},
+						{
+							"name": "/api/v2/login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const response = pm.response.json();",
+											"pm.environment.set(\"jwt_token\", response.token);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{user}}",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v2/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v2",
+										"login"
+									]
+								},
+								"description": "Auto generated using Swagger Inspector"
+							},
+							"response": [
+								{
+									"name": "Auto generated using Swagger Inspector",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "0",
+													"value": "u"
+												},
+												{
+													"key": "1",
+													"value": "s"
+												},
+												{
+													"key": "2",
+													"value": "e"
+												},
+												{
+													"key": "3",
+													"value": "r"
+												},
+												{
+													"key": "4",
+													"value": "n"
+												},
+												{
+													"key": "5",
+													"value": "a"
+												},
+												{
+													"key": "6",
+													"value": "m"
+												},
+												{
+													"key": "7",
+													"value": "e"
+												},
+												{
+													"key": "8",
+													"value": "="
+												},
+												{
+													"key": "9",
+													"value": "x"
+												},
+												{
+													"key": "10",
+													"value": "x"
+												},
+												{
+													"key": "11",
+													"value": "x"
+												},
+												{
+													"key": "12",
+													"value": "&"
+												},
+												{
+													"key": "13",
+													"value": "p"
+												},
+												{
+													"key": "14",
+													"value": "a"
+												},
+												{
+													"key": "15",
+													"value": "s"
+												},
+												{
+													"key": "16",
+													"value": "s"
+												},
+												{
+													"key": "17",
+													"value": "w"
+												},
+												{
+													"key": "18",
+													"value": "o"
+												},
+												{
+													"key": "19",
+													"value": "r"
+												},
+												{
+													"key": "20",
+													"value": "d"
+												},
+												{
+													"key": "21",
+													"value": "="
+												},
+												{
+													"key": "22",
+													"value": "x"
+												},
+												{
+													"key": "23",
+													"value": "x"
+												},
+												{
+													"key": "24",
+													"value": "x"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://dvws.local/api/v2/login",
+											"protocol": "http",
+											"host": [
+												"dvws",
+												"local"
+											],
+											"path": [
+												"api",
+												"v2",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "\"ea magna velit et Lorem\""
+								}
+							]
+						},
+						{
+							"name": "/api/v2/notesearch - Specific Note",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "search",
+											"value": "test",
+											"description": "Name of note",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v2/notesearch",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v2",
+										"notesearch"
+									]
+								},
+								"description": "Auto generated using Swagger Inspector"
+							},
+							"response": [
+								{
+									"name": "Auto generated using Swagger Inspector",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "\"{\\\"search\\\":\\\"search\\\"}\"",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://dvws.local/api/v2/notesearch",
+											"protocol": "http",
+											"host": [
+												"dvws",
+												"local"
+											],
+											"path": [
+												"api",
+												"v2",
+												"notesearch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "\"ea magna velit et Lorem\""
+								}
+							]
+						},
+						{
+							"name": "/api/v2/notesearch - All notes",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/v2/notesearch/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v2",
+										"notesearch",
+										"all"
+									]
+								},
+								"description": "Auto generated using Swagger Inspector"
+							},
+							"response": [
+								{
+									"name": "Auto generated using Swagger Inspector",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "\"{\\\"search\\\":\\\"search\\\"}\"",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://dvws.local/api/v2/notesearch",
+											"protocol": "http",
+											"host": [
+												"dvws",
+												"local"
+											],
+											"path": [
+												"api",
+												"v2",
+												"notesearch"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "\"ea magna velit et Lorem\""
+								}
+							]
+						},
+						{
+							"name": "/api/v2/export",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "data",
+											"value": "IkVSX05PX1NVQ0hfVEFCTEUi",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v2/export",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"export"
+									]
+								},
+								"description": "Auto generated using Swagger Inspector"
+							},
+							"response": [
+								{
+									"name": "Auto generated using Swagger Inspector",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "\"{\\\"data\\\":\\\"W3sicGFzc3BocmFzZSI6IjdkNzM3ZDgxNWU0Yzc5ODI1ZDZlNjA0YTZjNWQ3MjZlIiwicmVtaW5kZXIiOiJ0d2VyZXdyIn0seyJwYXNzcGhyYXNlIjoiN2Q3MzdkODE1ZTRjNzk4MjVkNmU2MDRhNmM1ZDcyNmUiLCJyZW1pbmRlciI6InR3ZXJld3IifSx7InBhc3NwaHJhc2UiOiI1NDU4N2U2ODM1NmM2YjQ3MzE3MDViNzE2OTY4NGE0OSIsInJlbWluZGVyIjoic2Rmc2RmIn0seyJwYXNzcGhyYXNlIjoiMzM0NjgwMmQ1MTZiNzEzNjY4NWM0OTU2MzM3YzJkNTgiLCJyZW1pbmRlciI6IndlZXdyIn1d\\\"}\"",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://dvws.local/api/v2/export",
+											"protocol": "http",
+											"host": [
+												"dvws",
+												"local"
+											],
+											"path": [
+												"api",
+												"v2",
+												"export"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "\"ea magna velit et Lorem\""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "/api/v2/sysinfo/uname",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v2/sysinfo/uname",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v2",
+										"sysinfo",
+										"uname"
+									]
+								},
+								"description": "Auto generated using Swagger Inspector"
+							},
+							"response": [
+								{
+									"name": "Auto generated using Swagger Inspector",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://dvws.local/api/v2/info",
+											"protocol": "http",
+											"host": [
+												"dvws",
+												"local"
+											],
+											"path": [
+												"api",
+												"v2",
+												"info"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "\"ea magna velit et Lorem\""
+								}
+							]
+						},
+						{
+							"name": "dvwsuserservice",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json; charset=utf-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:urn=\"urn:examples:usernameservice\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <urn:Username soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n         <username xsi:type=\"xsd:string\">gero et</username>\n      </urn:Username>\n   </soapenv:Body>\n</soapenv:Envelope>"
+								},
+								"url": {
+									"raw": "http://dvws.local/dvwsuserservice",
+									"protocol": "http",
+									"host": [
+										"dvws",
+										"local"
+									],
+									"path": [
+										"dvwsuserservice"
+									]
+								},
+								"description": "Auto generated using Swagger Inspector"
+							},
+							"response": [
+								{
+									"name": "Auto generated using Swagger Inspector",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://dvws.local/api/v2/info",
+											"protocol": "http",
+											"host": [
+												"dvws",
+												"local"
+											],
+											"path": [
+												"api",
+												"v2",
+												"info"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										}
+									],
+									"cookie": [],
+									"body": "\"ea magna velit et Lorem\""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/api/v1/info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/info",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"info"
+							]
+						},
+						"description": "Auto generated using Swagger Inspector"
+					},
+					"response": [
+						{
+							"name": "Auto generated using Swagger Inspector",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://dvws.local/api/v1/info",
+									"protocol": "http",
+									"host": [
+										"dvws",
+										"local"
+									],
+									"path": [
+										"api",
+										"v1",
+										"info"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "dvwsuserservice?wsdl",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dvws.local/dvwsuserservice?wsdl",
+							"protocol": "http",
+							"host": [
+								"dvws",
+								"local"
+							],
+							"path": [
+								"dvwsuserservice"
+							],
+							"query": [
+								{
+									"key": "wsdl",
+									"value": null
+								}
+							]
+						},
+						"description": "Auto generated using Swagger Inspector"
+					},
+					"response": [
+						{
+							"name": "Auto generated using Swagger Inspector",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://dvws.local/api/v1/info",
+									"protocol": "http",
+									"host": [
+										"dvws",
+										"local"
+									],
+									"path": [
+										"api",
+										"v1",
+										"info"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "/api-docs/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://dvws.local/api-docs/",
+							"protocol": "http",
+							"host": [
+								"dvws",
+								"local"
+							],
+							"path": [
+								"api-docs",
+								""
+							]
+						},
+						"description": "Auto generated using Swagger Inspector"
+					},
+					"response": [
+						{
+							"name": "Auto generated using Swagger Inspector",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://dvws.local/api/v1/info",
+									"protocol": "http",
+									"host": [
+										"dvws",
+										"local"
+									],
+									"path": [
+										"api",
+										"v1",
+										"info"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "xmlrpc",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\"?><methodCall><methodName>dvws.CheckUptime</methodName><params><param><value><string>http://127.0.0.1/uptime</string></value></param></params></methodCall>\n\n\n-->"
+						},
+						"url": {
+							"raw": "http://dvws.local:9090/xmlrpc",
+							"protocol": "http",
+							"host": [
+								"dvws",
+								"local"
+							],
+							"port": "9090",
+							"path": [
+								"xmlrpc"
+							]
+						},
+						"description": "Auto generated using Swagger Inspector"
+					},
+					"response": [
+						{
+							"name": "Auto generated using Swagger Inspector",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://dvws.local/api/v1/info",
+									"protocol": "http",
+									"host": [
+										"dvws",
+										"local"
+									],
+									"path": [
+										"api",
+										"v1",
+										"info"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://dvws.local/api",
+			"type": "string"
+		},
+		{
+			"key": "user",
+			"value": "test",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "test",
+			"type": "string"
+		}
+	]
+}
